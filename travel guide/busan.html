@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Two Days</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="busan_style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar--logo">
+            <a href="main2.html">Two Days</a>
+            <img src="/resource/images/twodays.png" alt="">
+        </div>
+        <div class="navbar___subtitle">
+            <span>부산 - 부산정복기</span>
+        </div>
+        <div class="navbar__home">
+            <a href="sitemap.html"><img src="/resource/images/home.png" alt="사이트맵"></a>
+        </div>
+    </nav>
+    <nav class="navbar2">
+        <ul class="navbar2__menu">
+            <li><a href="gyeongju.html">경주</a></li>
+            <li><a href="incheon.html">인천</a></li>
+            <li><a href="busan.html">부산</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar3">
+        <ul class="navbar3__menu">
+            <li><a href="busan.html">바다 정복</a></li>
+            <li><a href="#">맛집 정복</a></li>
+            <li><a href="#">포토 정복</a></li>
+            <li><a href="#">요트 정복</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article class="mapContainer">
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9506bb4488daaceff7b61246f126547a"></script>
+            <script>
+                var mapContainer = document.getElementById('map'),
+                    mapOption = {
+                        center: new kakao.maps.LatLng(35.15772648289328, 129.14033915632112),
+                        level: 5
+                    };
+
+                var map = new kakao.maps.Map(mapContainer, mapOption);
+                var positions = [
+                    {
+                        title: '광안리',
+                        latlng: new kakao.maps.LatLng(35.15314163063924, 129.11865689390538)
+                    },
+                    {
+                        title: '수변공원',
+                        latlng: new kakao.maps.LatLng(35.15457219133765, 129.1332230446865)
+                    },
+                    {
+                        title: '더베이101',
+                        latlng: new kakao.maps.LatLng(35.1568572217647, 129.15209924232678)
+                    },
+                    {
+                        title: '해운대',
+                        latlng: new kakao.maps.LatLng(35.15871098609886, 129.16035359755574)
+                    }
+                ];
+
+                var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
+                for (var i = 0; i < positions.length; i++) {
+                    var imageSize = new kakao.maps.Size(50, 70);
+                    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: positions[i].latlng,
+                        title: positions[i].title,
+                        image: markerImage
+                    });
+
+                }
+            </script>
+        </article>
+        <article class="content">
+            <span class="main_tour">메인 관광지 : 광안리,해운대</span>
+            <span class="date">1박 2일</span>
+            <span class="introduce">
+                코스소개 : 낭만이 깃든 카페거리와 독특한 분위기의 레스토랑 그곳에서
+                바라보는 해수욕장과 야경이 장관인 광안대교를 볼 수있는
+                광안리,
+                전국에서 가장 많은 피서객이 몰리는 국내 최대 해수욕장
+                해운대,
+                부산뿐만 아니라 전국적으로 유명한 해수욕장을 정복하는 루트
+            </span>
+            <span class="sub_tour">
+                서브 관광지: <br><br>
+                광안리 ~ 수변공원 구간 : list <br><br>
+
+                더베이101 ~ 해운대 구간 : list
+            </span>
+            <div class="rooms_button"><a href="busan_rooms.html">숙소보기</a></div>
+        </article>
+        <article class="tour_img">
+            <img src="/resource/images/busan_tourimg.png" alt="">
+        </article>
+    </section>
+    <footer class="company">
+        <span>(주)2조 |대표이사 : 홍용우 | 사업자 등록번호 : 111-11-11111 | 통신판매업신고 : 우주-14231호 | 메일 : abcd@gmail.com관광사업자 등록번호 :
+            제2016-11호 | 주소 : 서울 아이비타워 3층 | 호스팅서비스 제공자 : 로컬
+            고객센터 : 1234-1234 (오전 9시 - 익일 새벽 3시)
+        </span>
+        <a href="road_map.html">찾아오시는 길</a>
+    </footer>
+</body>
+
+</html>

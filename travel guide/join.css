@@ -1,0 +1,171 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    min-width: 1310px;
+    overflow: scroll;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6767;
+    padding: 10px 30px;
+}
+.navbar--logo{
+    display: flex;
+}
+.navbar--logo a{
+    text-decoration: none;
+    font-size: 55px;
+    font-family: pacifico;
+    color: white;
+    font-style: italic;
+}
+@font-face {
+    font-family: pacifico;
+    src: url(/resource/font/Pacifico-Regular.ttf);
+}
+@font-face{
+    font-family: East Sea Dokdo;
+    src: url('https://fonts.google.com/specimen/East+Sea+Dokdo?subset=korean');
+}
+.navbar___subtitle{
+    display: flex;
+}
+.navbar___subtitle span{
+    margin-right: 600px;
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+}
+.navbar2__menu{
+    margin-bottom: 0px;
+}
+.navbar2 ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    font-family: East Sea Dokdo;
+}
+.navbar2 a{
+    display: inline-block;
+    text-decoration: none;
+    color: #656C94;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;    
+    width: 100%;
+}
+.navbar2 li{
+    display: inline-block;
+    width: calc(100%/3);
+    text-align: center;
+}
+.navbar2 a:hover{
+    background-color: #dababa;
+}
+section{
+    background-image: url(/resource/images/main.png);
+    background-repeat : no-repeat;
+    background-size : cover;
+    width: 100%;
+    height: 822px;
+    display: flex;
+    justify-content: space-around;
+}
+.join legend{
+    text-align: center;
+    margin: 41px 0px;
+    font-family: 'Cute Font', cursive;
+    font-size: 45px;
+    color: #FF0000;
+    font-weight: bold;
+}
+.join form{
+    font-size: 36px;
+    font-family: 'Cute Font', cursive;
+}
+.join tr{
+    display: flex;
+    align-content: center;
+    width: 672.46px;
+    height: 49.69px;
+    margin-bottom: 20px;
+}
+.join td{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.join_id, .join_pw, .join_email, .join_name, .join_num{
+    width: 80px;
+}
+.join_id_t, .join_pw_t, .join_email_t, .join_name_t, .join_num_t{
+    width: 592.46px;
+}
+.join_email_t input{
+    margin-right: 20px;
+}
+.join_email_t select{
+    margin-left: 20px;
+}
+.join input{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-left: 20px;
+}
+.join a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    font-family: Roboto;
+    font-size: 24px;
+    align-items: center;
+    width: 272.23px;
+    height: 45.66px;
+    background-color: #FF6767;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin: 0px 30px;
+}
+.join_check label{
+    width: 564.17px;
+}
+.join :required {
+    padding-left: 20px;
+}
+.company{
+    display: flex;
+    background-color: #FDEDED;
+    padding: 30px;
+    justify-content: space-between;
+}
+.company span{
+    display: inline-block;
+    font-size: 15px;
+    width: 700px;
+    margin: auto 0px;
+}
+.company a{
+    display: block;
+    width: 200px;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #ff6767;
+    background-color: aliceblue;
+    border-radius: 30px;
+    padding: 5px;
+    font-family: Nanum Pen;
+}
+@font-face {
+    font-family: Nanum Pen;
+    src: url(/resource/font/NanumPenScript-Regular.ttf);
+}
+.company a:hover{
+    background-color: #dababa;
+}

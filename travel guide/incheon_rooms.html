@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="incheon_rooms_style.css">
+    <title>Two Days</title>
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar--logo">
+            <a href="main2.html">Two Days</a>
+            <img src="/resource/images/twodays.png" alt="">
+        </div>
+        <div class="navbar___subtitle">
+            <span>인천 - 이런곳이 있다고?</span>
+        </div>
+        <div class="navbar__home">
+            <a href="sitemap.html"><img src="/resource/images/home.png" alt="사이트맵"></a>
+        </div>
+    </nav>
+    <nav class="navbar2">
+        <ul class="navbar2__menu">
+            <li><a href="gyeongju.html">경주</a></li>
+            <li class="incheonli"><a href="incheon.html">인천</a></li>
+            <li><a href="busan.html">부산</a></li>
+        </ul>
+    </nav>
+    <nav class="navbar3">
+        <ul class="navbar3__menu">
+            <li><a href="incheon.html">이색테마</a></li>
+            <li><a href="#">정동진의 친구</a></li>
+            <li><a href="#">지하의 시장</a></li>
+            <li><a href="#">쓰레기 꽃</a></li>
+        </ul>
+    </nav>
+    <section>
+        <article class="map_container">
+            <div id="map" style="width: 100%; height: 500px;"></div>
+            <script type="text/javascript"
+                src="//dapi.kakao.com/v2/maps/sdk.js?appkey=9506bb4488daaceff7b61246f126547a&libraries=services"></script>
+            <script>
+                // 마커를 클릭하면 장소명을 표출할 인포윈도우 입니다
+                var infowindow = new kakao.maps.InfoWindow({ zIndex: 1 });
+
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                    mapOption = {
+                        center: new kakao.maps.LatLng(37.47406116941121, 126.60720531183919), // 지도의 중심좌표
+                        level: 4 // 지도의 확대 레벨
+                    };
+
+                // 지도를 생성합니다    
+                var map = new kakao.maps.Map(mapContainer, mapOption);
+
+                // 장소 검색 객체를 생성합니다
+                var ps = new kakao.maps.services.Places(map);
+
+                // 카테고리로 은행을 검색합니다
+                ps.categorySearch('AD5', placesSearchCB, { useMapBounds: true });
+
+                // 키워드 검색 완료 시 호출되는 콜백함수 입니다
+                function placesSearchCB(data, status, pagination) {
+                    if (status === kakao.maps.services.Status.OK) {
+                        for (var i = 0; i < data.length; i++) {
+                            displayMarker(data[i]);
+                        }
+                    }
+                }
+
+                // 지도에 마커를 표시하는 함수입니다
+                function displayMarker(place) {
+                    // 마커를 생성하고 지도에 표시합니다
+                    var marker = new kakao.maps.Marker({
+                        map: map,
+                        position: new kakao.maps.LatLng(place.y, place.x)
+                    });
+
+                    // 마커에 클릭이벤트를 등록합니다
+                    kakao.maps.event.addListener(marker, 'click', function () {
+                        // 마커를 클릭하면 장소명이 인포윈도우에 표출됩니다
+                        infowindow.setContent('<div style="padding:5px;font-size:12px;">' + place.place_name + '</div>');
+                        infowindow.open(map, marker);
+                    });
+                }
+            </script>
+        <article class="rooms_info">
+            <img src="/resource/images/incheon_roomsinfo.png" alt="">
+        </article>
+    </section>
+    <footer class="company">
+        <span>(주)2조 |대표이사 : 홍용우 | 사업자 등록번호 : 111-11-11111 | 통신판매업신고 : 우주-14231호 | 메일 : abcd@gmail.com관광사업자 등록번호 :
+            제2016-11호 | 주소 : 서울 아이비타워 3층 | 호스팅서비스 제공자 : 로컬
+            고객센터 : 1234-1234 (오전 9시 - 익일 새벽 3시)
+        </span>
+        <a href="road_map.html">찾아오시는 길</a>
+    </footer>
+</body>
+
+</html>

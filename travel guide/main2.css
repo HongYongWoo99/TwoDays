@@ -1,0 +1,213 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    min-width: 1310px;
+    overflow: scroll;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6767;
+    padding: 10px 30px;
+}
+.navbar--logo{
+    display: flex;
+}
+.navbar--logo a{
+    text-decoration: none;
+    font-size: 55px;
+    font-family: pacifico;
+    color: white;
+    font-style: italic;
+}
+@font-face {
+    font-family: pacifico;
+    src: url(/resource/font/Pacifico-Regular.ttf);
+}
+@font-face{
+    font-family: East Sea Dokdo;
+    src: url('https://fonts.google.com/specimen/East+Sea+Dokdo?subset=korean');
+}
+.navbar___subtitle{
+    display: flex;
+}
+.navbar___subtitle span{
+    margin-right: 600px;
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+}
+.navbar2__menu{
+    margin-bottom: 0px;
+}
+.navbar2 ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+    font-family: East Sea Dokdo;
+}
+.navbar2 a{
+    display: inline-block;
+    text-decoration: none;
+    color: #656C94;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;    
+    width: 100%;
+}
+.navbar2 li{
+    display: inline-block;
+    width: calc(100%/3);
+    text-align: center;
+}
+.navbar2 a:hover{
+    background-color: #dababa;
+}
+.main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.main img{
+    width: 100%;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+}
+.event{
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 840px;
+    margin: 30px 20px;
+    border-color: #9D9FD9;
+}
+.thismonth span{
+    margin: 20px;
+    width: 800px;
+    border-radius: 50px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    font-size: 45px;
+    background-color: #EEEFB0;
+    font-family: East Sea Dokdo;
+    color: #543939;
+}
+.thismonth{
+    width: 100%;
+}
+.area{
+    display: flex;
+    justify-content: space-around;
+}
+.area a{
+    border-radius: 50px;
+    text-align: center;
+    color: #8B0566;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 50px;
+    padding: 35px 0px;
+    margin-bottom: 20px;
+    background-repeat: no-repeat;
+    font-family: East Sea Dokdo;
+}
+#kyung{
+    background-image: url(/resource/images/index_gyeongju.png);
+    background-size: 100%;
+    width: 220px;
+    
+}
+#inchen{
+    background-image: url(/resource/images/index_incheon.png);
+    background-size: 100%;
+    width: 220px;
+}
+#busan{
+    background-image: url(/resource/images/index_busan.png);
+    background-size: 100%;
+    width: 220px;
+}
+.login_a{
+    margin: 60px 0px;
+    margin-right: 120px;
+    display: flex;
+    align-content: space-around;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 414px;
+}
+.picture{
+    margin-top: 10px;
+    align-content: flex-start;
+}
+.login_a li{
+    list-style: none;
+}
+.login_a2{
+    margin-left: 10px;
+}
+.login_a2 li{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.name{
+    font-size: 18px;
+    color: #5F3C3C;
+    margin: 10px 0px;
+}
+.day{
+    font-size: 15px;
+    color: #5F3C3C;
+    margin: 10px 0px;
+}
+.logout{
+    margin: 30px 0px;
+}
+.logout a{
+    padding: 10px 30px;
+    border: 1px solid black;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    background-color: #FF6767;
+    font-size: 20px;
+}
+.company{
+    display: flex;
+    background-color: #FDEDED;
+    padding: 30px;
+    justify-content: space-between;
+}
+.company span{
+    display: inline-block;
+    font-size: 15px;
+    width: 700px;
+    margin: auto 0px;
+}
+.company a{
+    display: block;
+    width: 200px;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #ff6767;
+    background-color: aliceblue;
+    border-radius: 30px;
+    padding: 5px;
+    font-family: Nanum Pen;
+}
+@font-face {
+    font-family: Nanum Pen;
+    src: url(/resource/font/NanumPenScript-Regular.ttf);
+}
+.company a:hover{
+    background-color: #dababa;
+}

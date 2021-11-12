@@ -1,0 +1,113 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    min-width: 1310px;
+    overflow: scroll;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6767;
+    padding: 10px 30px;
+}
+.navbar--logo{
+    display: flex;
+}
+.navbar--logo a{
+    text-decoration: none;
+    font-size: 55px;
+    font-family: pacifico;
+    color: white;
+    font-style: italic;
+}
+@font-face {
+    font-family: pacifico;
+    src: url(/resource/font/Pacifico-Regular.ttf);
+}
+.navbar___subtitle{
+    display: flex;
+}
+.navbar___subtitle span{
+    margin-right: 600px;
+    font-size: 36px;
+    color: white;
+    font-weight: 600;
+}
+.incheonli, .navbar3 li:first-child{
+    background-color: #ffd1d1;
+}
+
+.navbar2 ul, .navbar3 ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding-left: 0;
+}
+.navbar2 a, .navbar3 a{
+    display: inline-block;
+    text-decoration: none;
+    color: #656C94;
+    font-size: 48px;
+    font-weight: bold;
+    text-align: center;    
+    width: 100%;
+}
+.navbar2 li{
+    display: inline-block;
+    width: calc(100%/3);
+    text-align: center;
+}
+.navbar2 a:hover, .navbar3 a:hover{
+background-color: #dababa;
+}
+.navbar3 li{
+    display: inline-block;
+    width: calc(100%/4);
+    text-align: center;
+    border-right: 2px solid #dababa;
+}
+.navbar3 li:nth-child(4){
+    border: none;
+}
+.map_container{
+    padding: 40px;
+}
+.rooms_info{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 100px;
+}
+.company{
+    display: flex;
+    background-color: #FDEDED;
+    padding: 30px;
+    justify-content: space-between;
+}
+.company span{
+    display: inline-block;
+    font-size: 15px;
+    width: 700px;
+    margin: auto 0px;
+}
+.company a{
+    display: block;
+    width: 200px;
+    font-size: 40px;
+    text-decoration: none;
+    text-align: center;
+    color: #ff6767;
+    background-color: aliceblue;
+    border-radius: 30px;
+    padding: 5px;
+    font-family: nanumpen;
+}
+@font-face {
+    font-family: nanumpen;
+    src: url(/resource/font/NanumPenScript-Regular.ttf);
+}
+.company a:hover{
+    background-color: #dababa;
+}
